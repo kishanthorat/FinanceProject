@@ -1,0 +1,129 @@
+
+<body style="--bleeding: 0.2cm;--margin: 0.3cm; color: rgb(66, 64, 64); ">
+
+    <form  [formGroup]="sanctionForm" (ngSubmit)="updateSanction()"> 
+    <div class="page" style="background-color: azure;" id="sanctionForm" >
+        
+        <div class="row align-items-center" >
+            <div class="col-md-4">
+                <div class="nav-item" style="color:rgb(145, 187, 240) ;">
+                    <a class="nav-link" ><img src="assets/img/estate1.png" width="140" height="80"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="logo" style="color: navy; font-size:large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic; font-weight:900 ;"> ACE Home Finance</span></a>
+                </div>
+            </div>
+            
+           </div> 
+        <h3 align="center" style="font-weight: bold;">SANCTION LETTER</h3>
+    <br>
+    Date:{{todayDate|date : 'dd/MM/yyyy'}}<br><br>
+    
+    Dear  {{verifiedAppForm.customerDetails.customerName}},<br><br>
+    
+    <p>Thank you for choosing Ace Home Finance. Based on the application and information provided there in, we are pleased to extend an offer to you for a loan as per the preliminary terms and conditions mentioned below:
+    
+    </p>
+    
+    <table border="2" align="left-side" style="color: rgb(66, 64, 64)">
+        <tr>
+            <td>Loan Application Number :&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="text" style="background-color: rgb(145, 187, 240) ; border: 1px;" value="{{verifiedAppForm.applicationNo}}" ></td>
+        </tr>
+        <tr>
+            <td>Sanctional Date :</td>
+            <td><input type="text" style="background-color: rgb(247, 243, 240); border: 1px;" formControlName="sanctionDate"  value="{{todayDate|date:'yyyy-MM-dd'}}"></td>
+        </tr>
+        <!-- <tr>
+            <td>Contact Mail:</td>
+            <td><input type="text" style="background-color: rgb(247, 243, 240); border: 1px; " formControlName="contactDetails" ></td>
+        </tr>
+         -->
+    </table>
+    <br><br>
+    <table border="2px" >
+        <tr>
+            <td>Loan Type :</td>
+            <td>Home Loan</td>
+        </tr>
+        <tr>
+            <td>Loan Amount Sanction</td>
+            <td><input type="text" style="background-color: rgb(245, 244, 244); border: 1px;" formControlName="loanAmountSanctioned"></td>
+        </tr>
+        <tr>
+            <td>Reference Interest Rate :</td>
+            <!-- <td>X% per annum (Interest Type: Floating rate of interest | Periodicity of Interest Application: Monthly)</td> -->
+            <td>
+                <mat-form-field appearance="fill">
+                    <select matNativeControl  name="ROI" formControlName="interestType">
+                      <option disabled selected>select ROI</option>
+                      <option value="floating">Floating</option>
+                        <option value="fixed">Fixed</option>
+                    </select>
+                  </mat-form-field>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Rate OF Interest :&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="number" style="background-color: rgb(247, 243, 240); border: 1px;" formControlName="rateOfInterest" ></td>
+        </tr>
+        <tr>
+            <td>Loan Tenure(In Month) :</td>
+            <td><input type="text" style="background-color: rgb(255, 255, 255); border: 1px;" formControlName="loanTenure"></td>
+        </tr>
+        <tr>
+            <td>Monthly EMI :</td>
+            <td><input type="text" style="background-color: rgb(250, 249, 249); border: 1px;" formControlName="monthlyEmiAmount"></td>
+        </tr>
+       
+        <tr>
+            <td>Payment Mode :</td>
+            <td>
+                <mat-form-field appearance="fill">
+                    <select matNativeControl  formControlName="modeOfPayment">
+                      <option disabled selected>Select Payment Mode</option>
+                      <option value="online">Online</option>
+                        <option value="cash">By Cash</option>
+                    </select>
+                  </mat-form-field>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>Total Processing Charges</td>
+            <td>Up to 0.5 % of total loan amount </td>
+        </tr>
+        <tr>
+            <td>Origination Fee(inclusive of GST)&nbsp;&nbsp;&nbsp;</td>
+            <td>Rs.2500 Only</td>
+        </tr>
+        <tr>
+            <td>Sanction Letter Validity</td>
+            <td>180 days from the date of Sanction</td>
+        </tr>
+    </table> <br>
+    <div>
+        Terms And Conditions:
+    <p> 1. This quotation is not an invoice. Applicants do not have to place order after they receive the 
+        quotation;<br>
+        2. The information in the quotation is only for applicant to make a decision on purchasing and it is 
+        not allowed to be sent to other suppliers;<br>
+        3. The quotation will be valid for 30 days only;<br>
+        4. Little Sun reserves the right to terminate the quotation at its own discretion.   </p>
+    </div>
+    <div style="text-align: end;">Applicant Signature for Acceptance</div>
+        
+    
+    </div>
+    <br>
+    <br>
+    <div align="center" >
+        <input type="submit" value="SUBMIT" *ngIf="verifiedAppForm.statusCode!=='sanctioned'" style="background-color: rgb(160, 194, 223);">
+        </div>
+</form>
+    <div align="center"> 
+        <input type="file" (change)="onselectsSanctionLetter($event)" placeholder="Sanction Letter"/>&nbsp;&nbsp;&nbsp;
+
+        <input type="button" value="Send Email"  (click)="sendEmail()"style="background-color: rgb(160, 194, 223);">
+    </div>
+    <br>
+    <br>
+    </body>

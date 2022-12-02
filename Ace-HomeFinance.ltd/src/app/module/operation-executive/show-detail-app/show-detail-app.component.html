@@ -1,0 +1,273 @@
+
+<br>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br>
+<div class="container" >
+    <table class="table table-striped"  style="border-radius: 1rem ;" border="2">
+      <tbody>
+        
+        <tr ><th style="color: rgb(195, 7, 195);" align="center" colspan="6"><h3 align="center" style="font-weight: bolder;">All Details of Applicant</h3></th></tr>
+       <tr><th style="color: purple;" colspan="6"><h4  style="font-weight: bolder;">Applicant Personal Details</h4></th></tr> 
+        
+                
+                <tr >
+                    <td>Applicant Name :{{appForm.customerDetails.customerName}}</td>
+                    
+                    <td>Mobile No.: {{appForm.customerDetails.customerMobileno}}</td>
+        
+                    <td>Email Id : {{appForm.customerDetails.customerEmailId}}</td>
+                
+                    <td>Aadhar No. : {{appForm.customerDetails.adharNo}}</td>
+                    
+                     <td>photo     :</td>
+                    <td><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.photo}}" height="80" width="60"></td>
+            
+         
+                </tr>
+                <tr>
+                    <td>Date of Birth : {{appForm.customerDetails.customerDOB}}</td>
+                    <td>Age : {{appForm.customerDetails.customerAge}}</td>
+                    <td>gender : {{appForm.customerDetails.gender}}</td>
+                    <td>marital Status : {{appForm.customerDetails.maritalStatus}}</td>
+                    <td>Cibil : {{appForm.customerDetails.cibilScore}}</td>
+                    <td>Loan Type :{{appForm.customerDetails.loanType}}</td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="6"> Loan Required :{{appForm.customerDetails.totalLoanRequired}}</td>
+                </tr>
+            
+        
+                <tr><th style="color: purple;" colspan="6"><h4 style="font-weight: bolder;">Applicant Dependent Details</h4></th></tr>
+       
+                <tr >
+                    <td>Father Name: {{appForm.customerDependent.fatherName}}</td>
+                    <td>Mother Name : {{appForm.customerDependent.motherName}}</td>
+                    <td>No Of Family Member : {{appForm.customerDependent.noOfFamilyMember}}</td>
+                    <td>No of child : {{appForm.customerDependent.noOfChild}}</td>
+                    <td>dependent Member : {{appForm.customerDependent.dependentMember}}</td>
+                    <td>Family Income : {{appForm.customerDependent.familyIncome}}</td>
+                </tr>
+                
+            
+                
+                <tr><th style="color: purple;"  colspan="6"><h4  style="font-weight: bolder;">Address Details</h4></th></tr>
+
+                <tr><th style="color: purple; " colspan="6"><h5 style="font-weight: bolder;">Local Address</h5></th></tr>
+                    <tr><td>House No :{{appForm.customerAddress.localAddress.houseNo}}</td>
+                        <td>Street Name :{{appForm.customerAddress.localAddress.streetName}}</td>
+                        <td >Area Name : {{appForm.customerAddress.localAddress.areaName}}</td>
+                        <td>City : {{appForm.customerAddress.localAddress.cityName}}</td>
+                        <td>District : {{appForm.customerAddress.localAddress.district}}</td>
+                        <td>State : {{appForm.customerAddress.localAddress.state}}</td>
+                        
+                    </tr>
+                    <tr><td colspan="6">Pincode : {{appForm.customerAddress.localAddress.pinCode}}</td></tr>
+                    
+                    <tr><th style="color: purple; " colspan="6"><h5  style="font-weight: bolder;">Permanent Address</h5></th></tr>
+                    <tr><td>House No :{{appForm.customerAddress.permanentAddress.houseNo}}</td>
+                        <td>Street Name :{{appForm.customerAddress.permanentAddress.streetName}}</td>
+                        <td >Area Name : {{appForm.customerAddress.permanentAddress.areaName}}</td>
+                        <td>City : {{appForm.customerAddress.permanentAddress.cityName}}</td>
+                        <td>District : {{appForm.customerAddress.permanentAddress.district}}</td>
+                        <td>State : {{appForm.customerAddress.permanentAddress.state}}</td>
+                        
+                    </tr>
+                    <tr><td colspan="6">Pincode : {{appForm.customerAddress.permanentAddress.pinCode}}</td></tr>
+                 
+                    
+                <tr><th style="color: purple; align-content: center; " colspan="6"><h4  style="font-weight: bolder;">Educational Address</h4></th></tr>
+                    <tr>
+                        <td>Qualification  : {{appForm.customerEducationDetails.qualification}}</td>
+                        <td colspan="2">Educational Specialization   : {{appForm.customerEducationDetails.educationalSpecialization}}</td>
+                        <td>Passing year  :</td>
+                        <td colspan="2">{{appForm.customerEducationDetails.passingYear}}</td>
+                        
+                    </tr>
+
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Profession Detail</h4></th></tr>
+                <tr>
+                    <td>Profession Type  :{{appForm.customerProfession.professionType}}</td>
+                        <td>Salary : {{appForm.customerProfession.professionSalary}}</td>
+                        <td>working Period : {{appForm.customerProfession.professionWorkingPeriod}}</td>
+                        <td colspan="3">Designation : {{appForm.customerProfession.professionDesignation}}</td>
+                        
+                </tr>
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Mortgage Detail</h4></th></tr>
+                <tr>
+                    <td>Property type : {{appForm.mortgage.propertyType}}</td>
+                    <td>Property Value : {{appForm.mortgage.propertyValue}}</td>
+                    <td colspan="4">Loan on Property : {{appForm.mortgage.loanOnProperty}}</td>
+                    
+                </tr>
+
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Customer Account Detail</h4></th></tr>
+                <tr>
+                    <td>Account No : {{appForm.customerAccountDetail.accountNo}}</td>
+                    <td > Accountholder Name : </td><td>{{appForm.customerAccountDetail.accountHolderName}}</td>
+                    <td>Account Type  : {{appForm.customerAccountDetail.accountType}}</td>
+                    <td colspan="3">Account Status : {{appForm.customerAccountDetail.accountStatus}}</td>                    
+                </tr>
+
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Previous Loan Detail</h4></th></tr>
+                <tr>
+                    <td>previous loan Amount : {{appForm.previousLoan.previousLoanAmount}}</td>
+                    <td>Paid Amount: {{appForm.previousLoan.paidAmount}}</td>
+                    <td>Remaining Amount:{{appForm.previousLoan.remainingAmount}}</td>
+                    <td>Defaulter Count :{{appForm.previousLoan.defaulterCount}}</td>
+                    <td>Loan status : {{appForm.previousLoan.loanStatus}}</td>
+                    <td> remark : {{appForm.previousLoan.remark}}</td>
+                   
+                </tr>
+
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Loan Bank Detail</h4></th></tr>
+                <tr>
+                    <td>Branch : {{appForm.previousLoan.previousBankDetails.branchName}}</td>
+                    <td>IFSC code : {{appForm.previousLoan.previousBankDetails.ifscCode}}</td>
+                    <td>MICR code : {{appForm.previousLoan.previousBankDetails.micrCode}}</td>
+                    <td>Contact No : {{appForm.previousLoan.previousBankDetails.contactNo}}</td>
+                    <td> Email : {{appForm.previousLoan.previousBankDetails.email}}</td>
+                    <td> Status : {{appForm.previousLoan.previousBankDetails.status}}</td>
+                </tr>
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Bank Address</h4></th></tr>
+                <tr>
+                    <td> Area : {{appForm.previousLoan.previousBankDetails.bankAddress.bankArea}}</td>
+                    <td> City : {{appForm.previousLoan.previousBankDetails.bankAddress.bankCity}}</td>
+                    <td> District : {{appForm.previousLoan.previousBankDetails.bankAddress.bankDistrict}}</td>
+                    <td>state : {{appForm.previousLoan.previousBankDetails.bankAddress.bankState}}</td>
+                    <td colspan="2"> Pin Code : {{appForm.previousLoan.previousBankDetails.bankAddress.pincode}}</td>
+                    
+                </tr>
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Guarantor Details </h4></th></tr>
+                <tr>
+                    <td> Name : {{appForm.guarantorDetails.guarantorName}}</td>
+                    <td colspan="2"> Relation with Customer : {{appForm.guarantorDetails.guarantorRelationshipwithCustomer}}</td>
+                    <td> Mobile no : {{appForm.guarantorDetails.guarantorMobileNo}}</td>
+                    <td>D.O.B : {{appForm.guarantorDetails.guarantorDOB}}</td>
+                    <td> Addhar No : {{appForm.guarantorDetails.guarantorAdharcardNo}}</td>
+                    
+                </tr>
+                
+                <tr>
+                    <td> Job Details : {{appForm.guarantorDetails.guarantorJobDetails}}</td>
+                    <td> City  : {{appForm.guarantorDetails.guarantorCityName}}</td>
+                    <td colspan="5">  Area : {{appForm.guarantorDetails.guarantorAreaName}}</td>
+                </tr> 
+
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Property Detail</h4></th></tr>
+                <tr>
+                    <td>property Detail : {{appForm.propertyDetails.propertyType}}</td>
+                    <td>Property Type : {{appForm.propertyDetails.propertyArea}}</td>
+                    <td>Construction Area : {{appForm.propertyDetails.constructionArea}}</td>
+                    <td>Property price :{{appForm.propertyDetails.propertyPrice}}</td>
+                    <td colspan="2">Construction Price : {{appForm.propertyDetails.constructionPrice}}</td>
+                    
+                   
+                </tr>
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Property Address</h4></th></tr>
+                <tr>
+                    <td>Property Area Name: {{appForm.propertyDetails.propertyAddress.propertyAreaName}}</td>
+                    <td>CityName: {{appForm.propertyDetails.propertyAddress.propertyCityName}}</td>
+                    <td> District:{{appForm.propertyDetails.propertyAddress.propertyDistrict}}</td>
+                    <td> State :{{appForm.propertyDetails.propertyAddress.propertyState}}</td>
+                    <td colspan="2">Pin Code : {{appForm.propertyDetails.propertyAddress.propertyPinCode}}</td>
+                  
+                   
+                </tr>
+                <tr><th style="color: purple; " align="center" colspan="6"><h4  style="font-weight: bolder;">Documents</h4></th></tr>
+
+                <tr>
+                <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.customerProfession.professionsalarySlips}}" height="350" width="300"><br>
+                Customer salary slip <br><br>
+                <label >Accept :</label>
+                <input type="radio"  name="count1"  (click)="countVerify()">
+                &nbsp; &nbsp;<label >Reject :</label>
+                <input type="radio"  name="count1" (click)="countUnverify()">
+               
+            </td>
+                <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.mortgage.propertyProof}}"height="350" width="300"><br> Property Proof <br><br>
+                    <label >Accept :</label>
+                    <input type="radio"  name="count2"  (click)="countVerify()">
+                    &nbsp; &nbsp;<label >Reject :</label>
+                    <input type="radio"  name="count2" (click)="countUnverify()">
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.mortgage.propertyInsurance}}" height="350" width="300"><br> Property Insurance <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count3"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count3" (click)="countUnverify()">
+                    </td>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.addressProof}}"height="350" width="300"><br>Address Proof <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count4"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count4" (click)="countUnverify()">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.panCard}}" height="350" width="300"><br>Pan Card <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count5"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count5" (click)="countUnverify()">
+                    </td>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.aadhar}}" height="350" width="300"><br>Aadhar Proof <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count6"  (click)="countVerify()">
+                        &nbsp; &nbsp; <label >Reject :</label>
+                        <input type="radio"  name="count6" (click)="countUnverify()">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.incomeTaxReturn}}"height="350" width="300"><br>Income Tax Return Proof <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count7"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count7" (click)="countUnverify()">
+                    </td>
+
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.bankCheque}}" height="350" width="300"><br>Bank Cheque <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count8"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count8" (click)="countUnverify()">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.bankStatement}}" height="350" width="300"><br>Bank Statement <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count9"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count9" (click)="countUnverify()">
+                    </td>
+
+                    <td colspan="3" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.signature}}" height="350" width="300"><br>Applicant Signature <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count10"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count10" (click)="countUnverify()">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="6" align="center"><img src="data:image/jpeg;base64,{{appForm.allPersonalDocs.thumb}}" height="350" width="300"><br>Applicant Thumb <br><br>
+                        <label >Accept :</label>
+                        <input type="radio"  name="count11"  (click)="countVerify()">
+                        &nbsp; &nbsp;<label >Reject :</label>
+                        <input type="radio"  name="count11" (click)="countUnverify()">
+                    </td>
+
+                    
+                </tr>
+                    <tr>
+                            <td colspan="6" align="center"><button type="button" *ngIf="count>=11" class="btn btn-primary" (click)="verifiedAppln(appForm)">Verified</button></td>
+                    </tr>
+            </tbody>    
+</table>        
+
+        
+
+    

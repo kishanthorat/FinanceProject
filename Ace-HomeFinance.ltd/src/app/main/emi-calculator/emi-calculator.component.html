@@ -1,0 +1,103 @@
+
+
+<section class="col-l-12 padding-30">
+	<div class="col-l-10">
+		<div class="col-l-12 center head padding-bottom-20">
+			<h2>Instant Loan EMI Calculator</h2>
+		</div>
+		<div class="col-l-12 flex main-block">
+			<div [ngClass]="[emi && totalInterest && totalPayment ? 'col-l-4': 'col-l-6']" class="padding-10">
+				<div class="col-l-12 padding-bottom-20">
+					<label class="padding-right-10">Loan Amount: ₹</label>
+					<input class="loanAmount" type="number" placeholder="Loan Amount" name="loanAmount" [(ngModel)]="loanAmount" (input)="updateSliderMax('LoanAmount')" min="1" appSection>
+				</div>
+				<div class="col-l-12">
+					<mat-slider
+				        class="example-margin"
+				        [disabled]="slider.disabled"
+				        [invert]="slider.invert"
+				        [max]="loanAmtMax"
+				        [min]="slider.min"
+				        [step]="slider.step"
+				        [thumbLabel]="slider.thumbLabel"
+				        [tickInterval]="0"
+				        [(ngModel)]="loanAmount"
+				        [vertical]="slider.vertical"
+				        (click)="updateSliderMax('LoanAmount');">
+	    			</mat-slider>
+				</div>
+
+				<div class="col-l-12 padding-bottom-20">
+					<label class="padding-right-10">Interest Rate: %</label>
+					<input class="intRate" type="number" placeholder="Interest Rate" name="intRate" [(ngModel)]="intRate" (input)="updateSliderMax('InterestRate')" (intRateEmit)=Emit($event); step="0.01" min="1" appSection>
+				</div>
+				<div class="col-l-12">
+					<mat-slider
+				        class="example-margin"
+				        [disabled]="slider.disabled"
+				        [invert]="slider.invert"
+				        [max]="intRateMax"
+				        [min]="slider.min"
+				        [step]="0.1"
+				        [thumbLabel]="slider.thumbLabel"
+				        [tickInterval]="0"
+				        [(ngModel)]="intRate"
+				        [vertical]="slider.vertical"
+				        (click)="updateSliderMax('InterestRate');">
+	    			</mat-slider>
+				</div>
+
+				<div class="col-l-12 padding-bottom-20">
+					<label class="padding-right-10">Loan Duration: </label>
+					<input class="loanDuration" type="number" placeholder="Duration" name="loanDuration" [(ngModel)]="loanDuration" (input)="updateSliderMax('LoanDuration')" min="1" appSection>
+					<label class="padding-left-10">Years</label>
+				</div>
+				<div class="col-l-12">
+					<mat-slider
+				        class="example-margin"
+				        [disabled]="slider.disabled"
+				        [invert]="slider.invert"
+				        [max]="loanDurMax"
+				        [min]="slider.min"
+				        [step]="slider.step"
+				        [thumbLabel]="slider.thumbLabel"
+				        [tickInterval]="0"
+				        [(ngModel)]="loanDuration"
+				        [vertical]="slider.vertical"
+				        (click)="updateSliderMax('LoanDuration');">
+	    			</mat-slider>
+				</div>
+			</div>
+			<div [ngClass]="[emi && totalInterest && totalPayment ? 'col-l-4': 'col-l-6']" class="result">
+				<div class="col-l-12">
+					<div>Monthly Payment(EMI): ₹
+						<span *ngIf="emi;else other_content">{{emi}}</span>
+						<ng-template #other_content>0</ng-template>
+					</div>
+				</div>
+				<div class="col-l-12">
+					<div>Total Interest Payable: ₹ 
+						<span *ngIf="totalInterest;else other_content">{{totalInterest}}</span>
+						<ng-template #other_content>0</ng-template>
+					</div>
+				</div>
+				<div class="col-l-12">
+					<div>Total Amount (Principal + Interest): ₹ 
+						<span *ngIf="totalPayment;else other_content">{{totalPayment}}</span>
+						<ng-template #other_content>0</ng-template>
+					</div>
+				</div>
+			</div>
+			<div class="col-l-4 chart" *ngIf="emi && totalInterest && totalPayment">
+				<jqxChart #myChart
+				    [width]="getWidth()" [height]="500"
+				    [title]="'Payment Break-up'"
+				    [description]="''"
+				    [showLegend]="true" [enableAnimations]="true" [padding]="chart.padding"
+				    [titlePadding]="chart.titlePadding" [source]="chart.dataAdapter" [showBorderLine]="true"
+				    [seriesGroups]="chart.seriesGroups" [colorScheme]="'scheme02'">
+				</jqxChart>
+			</div>
+		</div>
+	</div>
+</section>

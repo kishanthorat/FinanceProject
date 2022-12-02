@@ -1,0 +1,81 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+  
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <div class="align-items-center mb-3 pb-1" >
+            <img src="assets/img/estate1.png" width="140" height="90">
+            <h2 class="my-5 display-5 fw-bold ls-tight" style="color: darkblue; font-weight: 900;">
+              ACE-Home Finance
+            </h2>
+              <h4 style="color: hsl(252, 71%, 69%)">Your Dream Home is our Destiny</h4>
+          </div>
+         
+          
+          <p class="center"><img src="assets\img\homepage1.jpg" alt="image" width="400" height="300" style="border-radius:1rem ;"></p>
+          <p class="mb-4 opacity-70" style="color: hsl(220, 49%, 8%)">
+           <marquee><h5>Home is where love resides, memories are created, friends always belong, and laughter never ends</h5></marquee>
+           you want to be financially free, you need to become a different person than you are today and let go of whatever has held you back in the past.
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            
+            <div class="card-body px-4 py-5 px-md-5"> 
+              
+              <form [formGroup]="loginForm" (click)="logOn()">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+              
+
+                <label style="color: darkblue;"><h3 style="font-weight: bolder;">Login Here</h3></label>
+
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example3">Username</label>
+                <input type="email" id="form3Example3" class="form-control" formControlName="username"/>
+                  
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example4">Password</label>
+                <input type="password" id="form3Example4" class="form-control" formControlName="password"/>
+                  
+                </div>
+  
+                <!-- Checkbox -->
+                <div class="form-check d-flex mb-4">
+                <label class="form-check-label" for="form2Example33">I accept all terms and Condition</label>
+                <input class="form-check-input" type="checkbox" value="None" id="form2Example33" checked/> 
+                </div>
+  
+               
+                <div class="text-center">
+                   <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Log In</button>
+                 <!-- Register buttons --><br>
+                  <p>or sign up with:</p>
+                  <button  class="btn btn-primary btn-block mb-4" routerLink="/register">New User Register</button>
+                  <a class="aria-current" href="www.facebook.com"><i class="fa a-facebook" ></i></a>
+                  <a class="aria-current" href="www.gmail.com"><i class="fa fa-google"></i></a>
+                  
+  
+                  <a class="aria-current" href="www.twitter.com"><i class="fa fa-twitter"></i>
+                  </a>
+  
+                  <a class="aria-current" href="www.github.com"><i class="fa fa-github"></i></a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->

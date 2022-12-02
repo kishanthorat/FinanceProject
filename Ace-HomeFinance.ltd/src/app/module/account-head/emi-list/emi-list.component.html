@@ -1,0 +1,55 @@
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+    Launch demo modal
+  </button>
+   -->
+  <!-- Modal -->
+  <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+        <table class="table table-striped" align="center" border="2" style="border-radius: 1rem ; border-color: purple ;">
+                  <tbody>
+                    <tr ><th colspan="10" style="color: purple; background-color: rgb(232, 210, 231);" align="center"><h3 align="center" style="font-weight: bolder; ">Emi-payment List</h3></th></tr>
+                    
+                    <th style="color: purple;">Date</th>
+                    <th style="color: purple;">Appl Id</th>
+                    <th  style="color: purple;">Customer name</th>
+                    <th style="color: purple;">Monthly Emi Amount</th>
+                    <th  style="color: purple;">Total Loan Ammount</th>
+                    <!-- <th style="color: purple;"> Amount paid</th>
+                    <th style="color: purple;"> Remaining Ammount</th>
+                    <th style="color: purple;">Defaulter Count</th>        
+                    <th style="color: purple;">Status</th> -->
+                   
+                    <th colspan="2" style="color: pu rple; align-items: center;">Action</th>
+                    <tr *ngFor="let date of monthArray;">
+
+                        <td>{{date}}</td>
+                       <td [(ngModel)]="custObj.applicationNo">{{custObj.applicationNo}}</td>
+                      <td [(ngModel)]="custObj.customerDetails.customerName">{{custObj.customerDetails.customerName}}</td>
+                      <td [(ngModel)]="custObj.sanctionLetter.monthlyEmiAmount">{{custObj.sanctionLetter.monthlyEmiAmount}}</td>
+                      <td  [(ngModel)]="custObj.loanDisbursement.totalAmount" >{{custObj.loanDisbursement.totalAmount}}</td>
+                     
+                      <!-- <<td>{{e.loanDisbursement.amountPaidDate}}</td>
+                      <td>{{e.statusCode}}</td>  -->
+                      <td><button class="btn btn-outline-success" (click)="payDate()">paid</button> &nbsp;
+                        <td><button class="btn btn-outline-success"  (click)="unpaid()">Unpaid</button> &nbsp;
+            
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+            
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+      
+            
+              
+            
+
+    

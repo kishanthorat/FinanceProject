@@ -1,0 +1,30 @@
+<div class="container" >
+    <table class="table table-striped" align="center" border="2" style="border-radius: 1rem ; border-color: purple ;">
+      <tbody>
+        <tr ><th colspan="9" style="color: purple; background-color: white;" align="center"><h3 align="center" style="font-weight: bolder; ">DefaulterList</h3></th></tr>
+        <th style="color: purple;">Appl Id</th>
+        <th  style="color: purple;">Customer name</th>
+        <th style="color: purple;">Mobile</th>
+       
+        <th style="color: purple;">customer Email</th>
+        <th  style="color: purple;">Monthly Emi</th>
+        <th style="color: purple;">Remaining Amount</th>
+        <th style="color: purple;" >Status</th>
+       
+        <!-- <th colspan="2" style="color: purple;">Action</th> -->
+        <tr *ngFor="let e of defaulterList ">
+          <td>{{e.applicationNo}}</td>
+          <td>{{e.customerDetails.customerName}}</td>
+          <td>{{e.customerDetails.customerMobileno}}</td>
+          <td>{{e.customerDetails.customerEmailId}}</td>
+          <td>{{e.ledger.monthlyEmi}}</td>
+          <td>{{e.ledger.remainingAmount}}</td>
+          <td>{{e.statusCode}}</td>
+                    <!-- <td><a  [routerLink]="['showDetail',e.applicationNo]"><i class="fa fa-eye" aria-hidden="true" style="color: royalblue;"></i></a> &nbsp; -->
+         <!-- </td> -->
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    <router-outlet></router-outlet>

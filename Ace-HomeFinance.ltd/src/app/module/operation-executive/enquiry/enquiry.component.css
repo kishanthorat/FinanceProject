@@ -1,0 +1,21 @@
+.btn-success{
+    border-radius: 0.8rem;
+ line-height: 0.6em;
+ width: 10%;
+ font-size: 12px;
+ box-sizing: content-box;
+ align-items: center;
+}
+
+.btn-danger{
+    border-radius: 0.8rem;
+    line-height: 0.6em;
+ width: 10%;
+ font-size: 12px;
+ box-sizing: content-box;
+ align-items: center; 
+}
+
+table{
+    text-align: center;
+}

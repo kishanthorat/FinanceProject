@@ -1,0 +1,66 @@
+<app-header1></app-header1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary" style="background-color: blueviolet;">
+  <div class="container-fluid">
+      <!-- <img src="assets\images\fin.png" width="50" height="50">&nbsp;&nbsp;
+    <h3 class="navbar-brand" style="color: rgb(193, 208, 229); font-weight: bolder; font-family: 'Courier New', Courier, monospace;" >AJ-Finance</h3> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <button class="button-64" role="button" routerLink="home"><span class="text">Home</span></button>
+          </li>
+          &nbsp; &nbsp; &nbsp;
+        <li class="nav-item dropdown">
+          <button class="dropdown-toggle button-64 "  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="text">Our Product</span></button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="construction-loan">Construction Loan</a>
+              <a class="dropdown-item" routerLink="extension-loan"> Extension Home Loan</a>
+              <a class="dropdown-item" routerLink="renovation-loan">Renovation Loan</a>
+              <a class="dropdown-item" routerLink="rural-homeloan">Rural Home Loan</a>
+            </div>
+          </li>
+        
+          &nbsp; &nbsp; &nbsp;
+        <li class="nav-item">
+          <button class="button-64" role="button" routerLink="aboutus"><span class="text">About us</span></button>
+        </li>
+        &nbsp; &nbsp; &nbsp;
+        <li class="nav-item">
+          <button class="button-64" role="button" routerLink="emi"><span class="text">Emi calculator</span></button>
+          </li>
+          &nbsp; &nbsp; &nbsp;
+          <li class="nav-item">
+            <button class="button-64" role="button" routerLink="faq"><span class="text">Faqs</span></button>
+          </li>
+          &nbsp; &nbsp; &nbsp;
+          <li class="nav-item">
+          <button class="button-64" role="button" routerLink="enquiry"><span class="text">Enquiry</span></button>
+          </li>
+          &nbsp; &nbsp; &nbsp;
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="login">Login</a>
+          </li> -->
+          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+           &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+           &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+           &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+        <li class="form-inline" >
+          <input class="form-control mr-sm-2" type="search" placeholder="  Search" aria-label="Search" style="background-color:aliceblue ;">
+          <button class="button-64" role="button" type="submit"><span class="text"> Search</span></button>
+        </li>
+
+        
+        
+    </ul>
+    
+
+    </div>
+  </div> 
+</nav>
+
+<router-outlet></router-outlet>
+<br>
+<app-homefooter></app-homefooter>

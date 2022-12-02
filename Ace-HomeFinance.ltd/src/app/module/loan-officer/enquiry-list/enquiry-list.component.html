@@ -1,0 +1,27 @@
+
+<div class="container" >
+<table class="table table-striped" align="center" border="1px" style="border-radius: 1rem ;">
+  <tbody>
+    <tr ><th colspan="9" style="color: white; background-color: purple;" align="center"><h3 align="center" style="font-weight: bolder;">Enquiry List</h3></th></tr>
+    <th style="color: purple;">Id</th>
+    <th  style="color: purple;">Enquiry name</th>
+    <th style="color: purple;">Age</th>
+    <th  style="color: purple;">Email</th>
+    <th style="color: purple;">mobile</th>
+    <th style="color: purple;">pancard No</th>
+    <th style="color: purple;">Remark</th>
+    <th colspan="2" style="color: purple;">Action</th>
+    <tr *ngFor="let e of enquiryList">
+      <td>{{e.enquiryId}}</td>
+      <td>{{e.enquiryName}}</td>
+      <td>{{e.age}}</td>
+      <td>{{e.email}}</td>
+      <td>{{e.mobileNo}}</td>
+      <td>{{e.pancardNo}}</td>
+      <td>{{e.remark}}</td>
+      <td><button [disabled]="e.remark==='forwarded' || e.remark==='approved' || e.remark==='rejected'"  *ngIf=" e.remark!=='approved'" (click)="proceedToOper(e)"><i class="fa fa-forward" aria-hidden="true"></i></button> &nbsp;
+     <button *ngIf=" e.remark==='approved'" class="btn btn-primary" (click)="apply()">Fill Form</button></td>
+    </tr>
+    </tbody>
+</table>
+</div>

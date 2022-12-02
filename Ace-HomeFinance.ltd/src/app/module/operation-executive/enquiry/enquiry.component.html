@@ -1,0 +1,36 @@
+
+<div class="container" >
+    <table class="table table-striped" align="center" border="1px" style="border-radius: 1rem ;">
+      <tbody>
+        <tr ><th colspan="12" style="color: white; background-color: rgb(235, 154, 235);" align="center"><h3 align="center" style="font-weight: bolder;">Enquiry List</h3></th></tr>
+        <th style="color: rgb(176, 11, 176);">Id</th>
+        <th  style="color: rgb(176, 11, 176);">Enquiry name</th>
+        <th style="color: rgb(176, 11, 176);">Age</th>
+        <th  style="color: rgb(176, 11, 176);">Email</th>
+        <th style="color: rgb(176, 11, 176);">Mobile No.</th>
+        <th style="color: rgb(176, 11, 176);">Pancard No.</th>
+        <th style="color: rgb(176, 11, 176);">Cibil Score</th>
+        <th style="color: rgb(176, 11, 176);">Cibil Score Date</th>
+        <th style="color: rgb(176, 11, 176);">Cibil Status</th>  
+        <th colspan="2" style="color: rgb(176, 11, 176);">Action</th>
+        <tr *ngFor="let e of enquiryList">
+          <td>{{e.enquiryId}}</td>
+          <td>{{e.enquiryName}}</td>
+          <td>{{e.age}}</td>
+          <td>{{e.email}}</td>
+          <td>{{e.mobileNo}}</td>
+          <td>{{e.pancardNo}}</td>
+          <td>{{e.cibilScore.cibilScore}}</td>
+          <td>{{e.cibilScore.cibilScoreDate}}</td>
+          <td>{{e.cibilScore.status}}</td>
+          <td><button type="button" *ngIf="e.cibilScore.cibilScore==0"  class="btn btn-light" (click)="generateCibil(e)"><i class="fa-solid fa-circle-plus">Generate</i></button>
+            <div align="center">
+            <button type="button"  *ngIf="e.cibilScore.cibilScore>750" class="btn btn-success" (click)="eligibleForAppl(e)"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+              <button type="button" *ngIf="e.cibilScore.cibilScore!=0 " class="btn btn-danger"  (click)="rejected(e)"> <i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+          </td>
+         
+        </tr>
+        </tbody>
+    </table>
+    </div>

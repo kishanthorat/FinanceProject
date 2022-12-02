@@ -1,0 +1,32 @@
+<div class="container" >
+    <table class="table table-striped" align="center" border="2" style="border-radius: 1rem ; border-color: purple ;">
+      <tbody>
+        <tr ><th colspan="9" style="color: purple; background-color: white;" align="center"><h3 align="center" style="font-weight: bolder; ">Verified Application List</h3></th></tr>
+        <th style="color: purple;">Appl Id</th>
+        <th  style="color: purple;">Customer name</th>
+        <th style="color: purple;">Mobile</th>
+       
+        <th style="color: purple;">Pancard No</th>
+        <th  style="color: purple;">Tenure</th>
+        <th style="color: purple;">Loan Amount Sanctioned</th>
+        <th style="color: purple;"> Monthly Emi</th>
+        <th style="color: purple;">Status</th>
+       
+        <th colspan="2" style="color: purple;">Action</th>
+        <tr *ngFor="let e of sanctionedList ">
+          <td>{{e.applicationNo}}</td>
+          <td>{{e.customerDetails.customerName}}</td>
+          <td>{{e.customerDetails.customerMobileno}}</td>
+          <td>{{e.customerDetails.pancardNo}}</td>
+          <td>{{e.sanctionLetter.loanTenure}}</td>
+          <td>{{e.sanctionLetter.loanAmountSanctioned}}</td>
+          <td>{{e.sanctionLetter.monthlyEmiAmount}}</td>
+          <td>{{e.statusCode}}</td>
+          <td><button class="btn btn-success" (click)="requestDisburse(e)">Forward to AH</button> &nbsp;
+         </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    
+

@@ -1,0 +1,240 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <section style="background-color: #eee;">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col">
+              <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#">User</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Register Profile</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body text-center">
+                  <img src="data:image/jpeg;base64,{{custObj.allPersonalDocs.photo}}" alt="avatar"
+                    class="rounded-circle img-fluid" style="width: 150px;">
+                  <h5 class="my-3">{{custObj.customerDetails.customerName}}</h5>
+                  <p class="text-muted mb-1">{{custObj.customerDetails.customerEmailId}}</p>
+                  <p class="text-muted mb-4">{{custObj.customerDetails.customerMobileno}}</p> 
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p >Age</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <p class="text-muted mb-0">{{custObj.customerDetails.customerAge}}</p>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-sm-6">
+                      <p >DOB</p>
+                    </div>
+                    <div class="col-sm-6" >
+                      <p class="text-muted mb-0" >{{custObj.customerDetails.customerDOB}}</p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p >Gender</p>
+                    </div>
+                    <div class="col-sm-6">
+                      <p class="text-muted mb-0">{{custObj.customerDetails.gender}}</p>
+                    </div>
+                 </div>
+
+                  <div class="d-flex justify-content-center mb-2">
+                    <!-- <button type="button" class="btn btn-primary">Follow</button>
+                    <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="card mb-4 mb-lg-0">
+                <div class="card-body p-0">
+                  <ul class="list-group list-group-flush rounded-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                      <i class="fas fa-globe fa-lg text-warning"></i>
+                      <p class="mb-0">https://mdbootstrap.com</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                      <i class="fab fa-github fa-lg" style="color: #333333;"></i>
+                      <p class="mb-0">mdbootstrap</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                      <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                      <p class="mb-0">@mdbootstrap</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                      <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                      <p class="mb-0">mdbootstrap</p>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                      <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                      <p class="mb-0">mdbootstrap</p>
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+
+
+                  <h3>Loan Valuation</h3>
+                  
+
+                
+                    <!-- General Info -->
+                         <hr>        
+                         <h4 >Loan Disbursement</h4>
+
+                       <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Loan No</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number" [(ngModel)]="custObj.currentloandetails.currentloanNo"> -->
+                        <p class="text-muted mb-0">{{custObj.sanctionLetter.sanctionId}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Aggrement Date</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number" [(ngModel)]="custObj.currentloandetails.loanAmount"> -->
+                        <p class="text-muted mb-0">{{custObj.sanctionLetter.sanctionDate}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Total Amount Paid</p>
+                        </div>
+                        <div class="col-sm-6">
+                          <p class="text-muted mb-0" >{{custObj.sanctionLetter.loanAmountSanctioned | number : '1.2-2'}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Bank Name</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number"  [(ngModel)]="custObj.currentloandetails.rateOfInterest"> -->
+                        <p class="text-muted mb-0" >{{custObj.customerAccountDetail.bankName}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Account No</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number"  [(ngModel)]="custObj.currentloandetails.rateOfInterest"> -->
+                        <p class="text-muted mb-0" >{{custObj.customerAccountDetail.accountNo}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">IFSC Code</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number"  [(ngModel)]="custObj.currentloandetails.rateOfInterest"> -->
+                        <p class="text-muted mb-0">{{custObj.customerAccountDetail.ifscCode}}</p>
+                        </div>
+                      </div>
+
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Account Type</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number"  [(ngModel)]="custObj.currentloandetails.rateOfInterest"> -->
+                        <p class="text-muted mb-0" >{{custObj.customerAccountDetail.accountType}}</p>
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Transfer Amount</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <input type="number"  [(ngModel)]="custObj.loanDisbursement.transferAmount">
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Amount Paid Date</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <input type="text"  [(ngModel)]="custObj.loanDisbursement.amountPaidDate" value="{{todayDate|date : 'dd/MM/yyyy'}}">
+                        </div>
+                      </div>
+
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p class="mb-0">Amount Pay Mode</p>
+                        </div>
+                        <div class="col-sm-6">
+                        <!-- <input type="number"  [(ngModel)]="custObj.loandisbursement.amountPayType-->
+                        <div>
+                            <!-- <label for="inputamountType" class="form-label">Mode</label> -->
+                       </div>
+                       <div>
+                            <select id="inputamountType" class="form-select" [(ngModel)]="custObj.loanDisbursement.amountPayType">
+                                   <option>Cash</option>
+                                   <option>Account</option>
+                                   <option>Cheque</option>
+                            </select>
+                        </div>
+                        </div>
+                      </div>
+
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>  
+      <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+           <button type="button" class="btn btn-primary" (click)=" loanDisbursement()">Disburse Ammount</button>  
+            <!-- <button type="button" class="btn btn-outline-warning" (click)="previous()" *ngIf="steps!=1">Previous</button>&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-success" (click)="next()" *ngIf="steps!=10">Next</button> &nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-danger" (click)="reject()" *ngIf="steps==10">Reject</button>
+          <button type="button" class="btn btn-outline-primary" (click)="submit()" *ngIf="steps==10">Approve</button>   -->
+      </div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+       
